@@ -54,13 +54,8 @@ export default {
   methods: {
     post: function() {
       this.$http
-        .post("http://jsonplaceholder.typicode.com/posts", {
-          title: this.blog.title,
-          body: this.blog.content,
-          userId: 1
-        })
+        .post("https://wd5363823571venqpm.wilddogio.com/post.json", this.blog)
         .then(function(data) {
-          console.log(data);
           this.submited = true;
         });
     }

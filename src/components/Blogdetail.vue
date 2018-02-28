@@ -1,7 +1,14 @@
 <template>
   <div class="blogdetail">
     <h1>{{blog.title}}</h1>
-    <article>{{blog.body}}</article>
+    <article>{{blog.content}}</article>
+    <p>作者：{{blog.author}}</p>
+    <p>分类：</p>
+    <ul>
+      <li v-for="category in blog.categories" :key="category">
+        {{category}}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -11,17 +18,18 @@ export default {
   data() {
     return {
       id: this.$route.params.id,
-      blog:{}
+      blog: {}
     };
   },
-  methods: {
-    
-  },
-  created(){
-      this.$http.get('http://jsonplaceholder.typicode.com/posts/' + this.id)
-      .then(function(data){
-          this.blog = data.body;
-          console.log(data);
+  methods: {},
+  created() {
+    this.$http
+      .get("https://wd5363823571venqpm.wilddogio.com/post/" + this.id + ".json")
+      .then(function(data) {
+        return data.json();
+      })
+      .then(function(data) {
+        this.blog = data;
       });
   }
 };
@@ -29,14 +37,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.blogdetail{
+.blogdetail {
   width: 85%;
-<<<<<<< HEAD
   margin: 20px auto 0;
   background: #eee;
-  padding: 20px;
-=======
-  margin: 0 auto;
->>>>>>> 410ea1b36d97a67988c2c036860d9cfb5d865d37
+  padding: 20px 15px;
 }
 </style>

@@ -7,7 +7,7 @@
     <div class="data-box" ref="dataBox">
       <div v-for="blog in filterBlogs" :key="blog.index" class="single-blog">
           <router-link :to="'/blog/' + blog.id">{{blog.title | toUpperCase}}</router-link>
-          <article>{{blog.body | snippet}}</article>
+          <article>{{blog.content | snippet}}</article>
       </div>
     </div>
     <div class="no-blog" v-bind:class="{ show: !show }">无匹配数据！</div>
@@ -31,14 +31,16 @@ export default {
     }
   },
   created() {
-    // this.$http
-    //   .get("http://jsonplaceholder.typicode.com/posts")
-    //   .then(function(data) {
-    //     this.blogs = data.body.slice(0, 10);
-    //   });    //请求网络json文件
-    this.$http.get("../../static/posts.json").then(function(data) {
-      //请求本地json文件
-      this.blogs = data.body.slice(0, 10);
+    this.$http.get("https://wd5363823571venqpm.wilddogio.com/post.json")
+    .then(function(data) {
+      return data.json();
+    }).then(function(data){
+      var blogsArray = [];
+      for(let key in data){
+        data[key].id = key;
+        blogsArray.push(data[key]);
+      }
+      this.blogs = blogsArray;
     });
   },
   computed: {
