@@ -29,10 +29,7 @@ export default {
     axios
       .get("https://wd5363823571venqpm.wilddogio.com/post/" + this.id + ".json")
       .then((data) => {
-        return data.data;
-      })
-      .then((data) => {
-        this.blog = data;
+        this.blog = data.data;
       });
   }
 };
