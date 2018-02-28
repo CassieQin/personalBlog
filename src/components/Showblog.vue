@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "showblog",
   data() {
@@ -31,10 +32,10 @@ export default {
     }
   },
   created() {
-    this.$http.get("https://wd5363823571venqpm.wilddogio.com/post.json")
-    .then(function(data) {
-      return data.json();
-    }).then(function(data){
+    axios.get("https://wd5363823571venqpm.wilddogio.com/post.json")
+    .then((data) => {
+      return data.data;
+    }).then((data) => {
       var blogsArray = [];
       for(let key in data){
         data[key].id = key;

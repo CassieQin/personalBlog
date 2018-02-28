@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "blogdetail",
   data() {
@@ -25,12 +26,12 @@ export default {
   },
   methods: {},
   created() {
-    this.$http
+    axios
       .get("https://wd5363823571venqpm.wilddogio.com/post/" + this.id + ".json")
-      .then(function(data) {
-        return data.json();
+      .then((data) => {
+        return data.data;
       })
-      .then(function(data) {
+      .then((data) => {
         this.blog = data;
       });
   }

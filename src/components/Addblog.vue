@@ -37,6 +37,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "addblog",
   data() {
@@ -53,9 +54,9 @@ export default {
   },
   methods: {
     post: function() {
-      this.$http
+      axios
         .post("https://wd5363823571venqpm.wilddogio.com/post.json", this.blog)
-        .then(function(data) {
+        .then((data) => {
           this.submited = true;
         });
     }
