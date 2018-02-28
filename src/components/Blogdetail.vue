@@ -31,12 +31,8 @@ export default {
 <style scoped>
 .blogdetail{
   width: 85%;
-<<<<<<< HEAD
   margin: 20px auto 0;
   background: #eee;
   padding: 20px;
-=======
-  margin: 0 auto;
->>>>>>> 410ea1b36d97a67988c2c036860d9cfb5d865d37
 }
 </style>
