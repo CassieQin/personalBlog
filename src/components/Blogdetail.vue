@@ -29,5 +29,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.blogdetail{
+  width: 85%;
+  margin: 0 auto;
+}
 </style>

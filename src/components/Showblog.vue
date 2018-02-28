@@ -99,7 +99,6 @@ export default {
 .single-blog a {
   font-size: 16px;
   color: #444;
-  text-decoration: none;
 }
 .single-blog a:hover{color: #42b983;}
 .single-blog article {
