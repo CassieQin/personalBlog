@@ -1,5 +1,5 @@
 <template>
-  <div class="addblog">
+  <div class="addblog main-con">
     <h2 class="blog-title">新增博客</h2>
     <form action="" v-if="!submited" class="addForm">
         <label for="">博客标题 <input type="text" value="" placeholder="请输入博客标题" required v-model="blog.title"></label>
@@ -17,7 +17,7 @@
           </select>
         </label>
         <div class="text-center">
-          <button @click.prevent="post" class="btn">添加博客</button>
+          <button @click.prevent="post" class="btn">发布</button>
         </div>
     </form>
     <div class="sucess" v-if="submited">您的博客发布成功！</div>
@@ -89,10 +89,6 @@ textarea {
 textarea {
   padding: 10px;
 }
-.addblog {
-  width: 85%;
-  margin: 0 auto;
-}
 .sucess {
   height: 40px;
   line-height: 40px;
@@ -105,5 +101,6 @@ textarea {
 .addForm{
   background: #eee;
   padding: 20px 15px;
+  margin-top: 20px; 
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="showblog">
+  <div class="showblog main-con">
     <h2 class="blog-title">博客总览</h2>
     <form class="search">
         <input id="input" ref="input" type="text" placeholder="请输入博客名称或标题" /><button  @click="formSubmit" class="btn">搜索</button>
@@ -78,31 +78,32 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.showblog {
-  width: 85%;
-  margin: 0 auto;
-}
-.search {
+.search{
   margin: 20px 0;
   height: 30px;
 }
 .search input {
   height: 26px;
-  width: 300px;
+  width: 50%;
   padding: 0 10px;
   vertical-align: top;
 }
 .single-blog {
   height: auto;
   padding: 20px 15px;
-  background: #eee;
+  background: #f1f1f1;
   margin-top: 15px;
+  cursor: pointer;
+  border-radius: 2px;
 }
+.single-blog:hover{background: #eee;}
 .single-blog a {
+  display: inline-block;
+  width: 100%;
   font-size: 16px;
   color: #444;
 }
-.single-blog a:hover{color: #42b983;}
+.single-blog:hover a{color: #42b983;}
 .single-blog article {
   margin-top: 10px;
   color: #666;

@@ -1,14 +1,16 @@
 <template>
-  <div class="blogdetail">
-    <h1>{{blog.title}}</h1>
-    <article>{{blog.content}}</article>
-    <p>作者：{{blog.author}}</p>
-    <p>分类：</p>
-    <ul>
-      <li v-for="category in blog.categories" :key="category">
-        {{category}}
-      </li>
-    </ul>
+  <div class="blogdetail main-con">
+    <div class="con-detail">
+      <h1>{{blog.title}}</h1>
+      <article>{{blog.content}}</article>
+      <p>作者：{{blog.author}}</p>
+      <p>分类：</p>
+      <ul>
+        <li v-for="category in blog.categories" :key="category">
+          {{category}}
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -37,9 +39,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.blogdetail {
-  width: 85%;
-  margin: 20px auto 0;
+.con-detail {
   background: #eee;
   padding: 20px 15px;
 }
