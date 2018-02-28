@@ -2,11 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import VueResource from 'vue-resource'
 import router from './router'
+import axios from 'axios'
 
+axios.defaults.baseURL = 'https://wd5363823571venqpm.wilddogio.com'
 Vue.config.productionTip = false
-Vue.use(VueResource)
 
 //自定义指令
 // Vue.directive('rainbow',{

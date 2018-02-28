@@ -32,7 +32,7 @@ export default {
     }
   },
   created() {
-    axios.get("https://wd5363823571venqpm.wilddogio.com/post.json")
+    axios.get("/post.json")
     .then((data) => {
       var blogsArray = [];
       for(let key in data.data){

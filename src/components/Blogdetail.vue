@@ -27,7 +27,7 @@ export default {
   methods: {},
   created() {
     axios
-      .get("https://wd5363823571venqpm.wilddogio.com/post/" + this.id + ".json")
+      .get("/post/" + this.id + ".json")
       .then((data) => {
         this.blog = data.data;
       });

@@ -55,7 +55,7 @@ export default {
   methods: {
     post: function() {
       axios
-        .post("https://wd5363823571venqpm.wilddogio.com/post.json", this.blog)
+        .post("/post.json", this.blog)
         .then((data) => {
           this.submited = true;
         });
