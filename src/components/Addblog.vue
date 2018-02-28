@@ -1,7 +1,7 @@
 <template>
   <div class="addblog">
     <h2 class="blog-title">新增博客</h2>
-    <form action="" v-if="!submited">
+    <form action="" v-if="!submited" class="addForm">
         <label for="">博客标题 <input type="text" value="" placeholder="请输入博客标题" required v-model="blog.title"></label>
         <label for="">博客内容 <textarea placeholder="请输入博客内容" v-model="blog.content"></textarea></label>
         <div id="checkboxes">
@@ -107,4 +107,8 @@ textarea {
   margin-top: 20px;
 }
 #checkboxes label{display: inline-block; cursor: pointer; margin-left: 15px;}
+.addForm{
+  background: #eee;
+  padding: 20px 15px;
+}
 </style>

@@ -44,11 +44,11 @@ ul {
   height: 60px;
   line-height: 60px;
   font-size: 18px;
-  background: #363636;
+  background: #2f4050;
   text-align: center;
 }
 .header a {
-  color: #a6a6a6;
+  color: #a7b1c2;
   text-decoration: none;
   margin-right: 15px;
 }
@@ -56,8 +56,13 @@ a.router-link-exact-active {
   color: #fff;
 }
 .blog-title {
-  color: #333;
-  margin: 10px 0;
+  color: #515151;
+  height: 35px;
+  line-height: 35px;
+  border-left: 6px solid  #42b983;
+  margin: 40px 0;
+  vertical-align: middle;
+  padding-left: 10px;
 }
 .btn {
   height: 30px;
@@ -69,5 +74,8 @@ a.router-link-exact-active {
   vertical-align: middle;
   cursor: pointer;
 }
-.text-center{text-align: center; margin-top: 40px;}
+.text-center {
+  text-align: center;
+  margin-top: 40px;
+}
 </style>
