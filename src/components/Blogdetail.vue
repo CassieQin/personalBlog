@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "blogdetail",
   data() {
@@ -26,11 +26,9 @@ export default {
   },
   methods: {},
   created() {
-    axios
-      .get("/post/" + this.id + ".json")
-      .then((data) => {
-        this.blog = data.data;
-      });
+    axios.get("/post/" + this.id + ".json").then(data => {
+      this.blog = data.data;
+    });
   }
 };
 </script>

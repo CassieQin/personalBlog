@@ -100,4 +100,8 @@ a.router-link-exact-active {
   color: #FFF;
   text-align: center;
 }
+/*表单验证样式*/
+input[type="text"],textarea,select{border: 1px solid #dbdbdb;}
+.input.is-danger, .textarea.is-danger { border: 1px solid #ff3860;}
+.help.is-danger { color: #ff3860; vertical-align: top;}
 </style>

@@ -4,7 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
-
+import VeeValidate, {Validator} from 'vee-validate';
+import cn from 'vee-validate/dist/locale/zh_CN';
+Validator.localize('cn', cn);
+Vue.use(VeeValidate);
 axios.defaults.baseURL = 'https://wd5363823571venqpm.wilddogio.com'
 Vue.config.productionTip = false
 
