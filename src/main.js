@@ -4,13 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
-import VeeValidate, {Validator} from 'vee-validate';
-import cn from 'vee-validate/dist/locale/zh_CN';
-Validator.localize('cn', cn);
-Vue.use(VeeValidate);
+import VeeValidate from 'vee-validate'
+
 axios.defaults.baseURL = 'https://wd5363823571venqpm.wilddogio.com'
 Vue.config.productionTip = false
 
+Vue.use(VeeValidate);
 //自定义指令
 // Vue.directive('rainbow',{
 //   bind(el,binding,vnode){
